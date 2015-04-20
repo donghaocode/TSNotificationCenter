@@ -9,22 +9,12 @@
 /* Begin PBXBuildFile section */
 		E11C83401AE4B4E700C023B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E11C833F1AE4B4E700C023B9 /* main.m */; };
 		E11C83431AE4B4E700C023B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E11C83421AE4B4E700C023B9 /* AppDelegate.m */; };
-		E11C83461AE4B4E700C023B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11C83451AE4B4E700C023B9 /* ViewController.m */; };
+		E11C83461AE4B4E700C023B9 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E11C83451AE4B4E700C023B9 /* ViewController.mm */; };
 		E11C83491AE4B4E700C023B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E11C83471AE4B4E700C023B9 /* Main.storyboard */; };
 		E11C834B1AE4B4E700C023B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E11C834A1AE4B4E700C023B9 /* Images.xcassets */; };
 		E11C834E1AE4B4E700C023B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E11C834C1AE4B4E700C023B9 /* LaunchScreen.xib */; };
-		E11C835A1AE4B4E700C023B9 /* demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E11C83591AE4B4E700C023B9 /* demoTests.m */; };
+		E1206FD61AE4D096005652F5 /* TSNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = E1206FD41AE4D096005652F5 /* TSNotificationCenter.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E11C83541AE4B4E700C023B9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E11C83321AE4B4E700C023B9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E11C83391AE4B4E700C023B9;
-			remoteInfo = demo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E11C833A1AE4B4E700C023B9 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,24 +23,17 @@
 		E11C83411AE4B4E700C023B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E11C83421AE4B4E700C023B9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E11C83441AE4B4E700C023B9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E11C83451AE4B4E700C023B9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E11C83451AE4B4E700C023B9 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		E11C83481AE4B4E700C023B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E11C834A1AE4B4E700C023B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E11C834D1AE4B4E700C023B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		E11C83531AE4B4E700C023B9 /* demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E11C83581AE4B4E700C023B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E11C83591AE4B4E700C023B9 /* demoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = demoTests.m; sourceTree = "<group>"; };
+		E1206FD31AE4D096005652F5 /* TSNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSNotificationCenter.h; sourceTree = "<group>"; };
+		E1206FD41AE4D096005652F5 /* TSNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSNotificationCenter.m; sourceTree = "<group>"; };
+		E1206FD51AE4D096005652F5 /* TSNotificationCenter__config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSNotificationCenter__config.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E11C83371AE4B4E700C023B9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E11C83501AE4B4E700C023B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -63,8 +46,8 @@
 		E11C83311AE4B4E700C023B9 = {
 			isa = PBXGroup;
 			children = (
+				E1206FD21AE4D096005652F5 /* TSNotificationCenter */,
 				E11C833C1AE4B4E700C023B9 /* demo */,
-				E11C83561AE4B4E700C023B9 /* demoTests */,
 				E11C833B1AE4B4E700C023B9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				E11C833A1AE4B4E700C023B9 /* demo.app */,
-				E11C83531AE4B4E700C023B9 /* demoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,7 +66,7 @@
 				E11C83411AE4B4E700C023B9 /* AppDelegate.h */,
 				E11C83421AE4B4E700C023B9 /* AppDelegate.m */,
 				E11C83441AE4B4E700C023B9 /* ViewController.h */,
-				E11C83451AE4B4E700C023B9 /* ViewController.m */,
+				E11C83451AE4B4E700C023B9 /* ViewController.mm */,
 				E11C83471AE4B4E700C023B9 /* Main.storyboard */,
 				E11C834A1AE4B4E700C023B9 /* Images.xcassets */,
 				E11C834C1AE4B4E700C023B9 /* LaunchScreen.xib */,
@@ -102,21 +84,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E11C83561AE4B4E700C023B9 /* demoTests */ = {
+		E1206FD21AE4D096005652F5 /* TSNotificationCenter */ = {
 			isa = PBXGroup;
 			children = (
-				E11C83591AE4B4E700C023B9 /* demoTests.m */,
-				E11C83571AE4B4E700C023B9 /* Supporting Files */,
+				E1206FD31AE4D096005652F5 /* TSNotificationCenter.h */,
+				E1206FD41AE4D096005652F5 /* TSNotificationCenter.m */,
+				E1206FD51AE4D096005652F5 /* TSNotificationCenter__config.h */,
 			);
-			path = demoTests;
-			sourceTree = "<group>";
-		};
-		E11C83571AE4B4E700C023B9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E11C83581AE4B4E700C023B9 /* Info.plist */,
-			);
-			name = "Supporting Files";
+			path = TSNotificationCenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,24 +114,6 @@
 			productReference = E11C833A1AE4B4E700C023B9 /* demo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E11C83521AE4B4E700C023B9 /* demoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E11C83601AE4B4E700C023B9 /* Build configuration list for PBXNativeTarget "demoTests" */;
-			buildPhases = (
-				E11C834F1AE4B4E700C023B9 /* Sources */,
-				E11C83501AE4B4E700C023B9 /* Frameworks */,
-				E11C83511AE4B4E700C023B9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E11C83551AE4B4E700C023B9 /* PBXTargetDependency */,
-			);
-			name = demoTests;
-			productName = demoTests;
-			productReference = E11C83531AE4B4E700C023B9 /* demoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,10 +125,6 @@
 				TargetAttributes = {
 					E11C83391AE4B4E700C023B9 = {
 						CreatedOnToolsVersion = 6.2;
-					};
-					E11C83521AE4B4E700C023B9 = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = E11C83391AE4B4E700C023B9;
 					};
 				};
 			};
@@ -189,7 +142,6 @@
 			projectRoot = "";
 			targets = (
 				E11C83391AE4B4E700C023B9 /* demo */,
-				E11C83521AE4B4E700C023B9 /* demoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -205,13 +157,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E11C83511AE4B4E700C023B9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -219,29 +164,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E11C83461AE4B4E700C023B9 /* ViewController.m in Sources */,
+				E11C83461AE4B4E700C023B9 /* ViewController.mm in Sources */,
 				E11C83431AE4B4E700C023B9 /* AppDelegate.m in Sources */,
 				E11C83401AE4B4E700C023B9 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E11C834F1AE4B4E700C023B9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E11C835A1AE4B4E700C023B9 /* demoTests.m in Sources */,
+				E1206FD61AE4D096005652F5 /* TSNotificationCenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E11C83551AE4B4E700C023B9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E11C83391AE4B4E700C023B9 /* demo */;
-			targetProxy = E11C83541AE4B4E700C023B9 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E11C83471AE4B4E700C023B9 /* Main.storyboard */ = {
@@ -359,40 +289,6 @@
 			};
 			name = Release;
 		};
-		E11C83611AE4B4E700C023B9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = demoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/demo.app/demo";
-			};
-			name = Debug;
-		};
-		E11C83621AE4B4E700C023B9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = demoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/demo.app/demo";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -412,14 +308,7 @@
 				E11C835F1AE4B4E700C023B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		E11C83601AE4B4E700C023B9 /* Build configuration list for PBXNativeTarget "demoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E11C83611AE4B4E700C023B9 /* Debug */,
-				E11C83621AE4B4E700C023B9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
