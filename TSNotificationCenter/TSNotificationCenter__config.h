@@ -1,5 +1,5 @@
 
 
-TSNC_0(Hello)
-TSNC_1(HelloWorld,NSString*,title)
-TSNC_2(DidScroll, float, x, float, y)
+TSNC_0(HelloWorld)
+TSNC_1(hello,NSString*,name)
+TSNC_3(didMove, int, x, int, y, int,z)

@@ -11,8 +11,6 @@
 
 
 
-
-
 @interface ViewController ()
 
 @end
@@ -21,31 +19,28 @@
 @implementation ViewController
 
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     //self dealloc ---> will auto remove
-    [TSNotificationCenter reg_Hello:self block:^{
-        NSLog(@"hello ");
+    
+    [self ts_reg_HelloWorld:^{
+        NSLog(@"hello world");
     }];
     
-    [TSNotificationCenter reg_Hello:self block:^{
-        NSLog(@"hello hello");
+    [self ts_reg_hello:^(NSString *name) {
+        NSLog(@"hello %@",name);
     }];
     
-    [TSNotificationCenter reg_HelloWorld:self block:^(NSString *title) {
-        NSLog(@"hello %@",title);
-    }];
-    
-    [TSNotificationCenter reg_DidScroll:self block:^(float x, float y) {
-        NSLog(@"x = %.2f   y = %.2f",x,y);
+    [self ts_reg_didMove:^(int x, int y, int z) {
+        NSLog(@"x=%d  y=%d  z=%d",x,y,z);
     }];
     
     
-    [TSNotificationCenter call_Hello];
-    [TSNotificationCenter call_HelloWorld_with_title:@"哈哈哈哈"];
-    [TSNotificationCenter call_DidScroll_with_x:100 y:200];
+    [TSNotificationCenter call_HelloWorld];
+    [TSNotificationCenter call_hello_with_name:@"fc01"];
+    [TSNotificationCenter call_didMove_with_x:11 y:22 z:33];
     
 }
 @end
