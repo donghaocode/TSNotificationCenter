@@ -4,22 +4,22 @@
 @implementation NSObject(TSNotificationCenter)
 
 #define TSNC_0(name) \
--(void)ts_reg_##name:(void(^)())block{}
+-(void)ts_##name:(void(^)())block{}
 
 #define TSNC_1(name,type1,name1) \
--(void)ts_reg_##name:(void(^)(type1 name1))block{}
+-(void)ts_##name:(void(^)(type1 name1))block{}
 
 #define TSNC_2(name,type1,name1,type2,name2) \
--(void)ts_reg_##name:(void(^)(type1 name1,type2 name2))block{}
+-(void)ts_##name:(void(^)(type1 name1,type2 name2))block{}
 
 #define TSNC_3(name,type1,name1,type2,name2,type3,name3) \
--(void)ts_reg_##name:(void(^)(type1 name1,type2 name2,type3 name3))block{}
+-(void)ts_##name:(void(^)(type1 name1,type2 name2,type3 name3))block{}
 
 #define TSNC_4(name,type1,name1,type2,name2,type3,name3,type4,name4) \
--(void)ts_reg_##name:(void(^)(type1 name1,type2 name2,type3 name3,type4 name4))block{}
+-(void)ts_##name:(void(^)(type1 name1,type2 name2,type3 name3,type4 name4))block{}
 
 #define TSNC_5(name,type1,name1,type2,name2,type3,name3,type4,name4,type5,name5) \
--(void)ts_reg_##name:(void(^)(type1 name1,type2 name2,type3 name3,type4 name4,type5 name5))block{}
+-(void)ts_##name:(void(^)(type1 name1,type2 name2,type3 name3,type4 name4,type5 name5))block{}
 
 #include "TSNotificationCenter__config.h"
 
