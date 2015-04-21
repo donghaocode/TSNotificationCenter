@@ -1,5 +1,6 @@
 ###Type-safe event handling framework.
 
+##**外观是这样子的 还没实现**
 
 ###TSNotificationCenter__config.h
 
