@@ -13,9 +13,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     //self dealloc ---> will auto remove
-    
     [self ts_test:^{
         NSLog(@"test");
     }];

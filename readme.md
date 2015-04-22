@@ -15,9 +15,9 @@ TSNC_3(didMove, int, x, int, y, int,z)
 ```objective-c
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     //self dealloc ---> will auto remove
-    
     [self ts_test:^{
         NSLog(@"test");
     }];
@@ -33,8 +33,7 @@ TSNC_3(didMove, int, x, int, y, int,z)
     
     [TSNotificationCenter call_test];
     [TSNotificationCenter call_hello_with_name:@"fc01"];
-    [TSNotificationCenter call_didMove_with_x:11 y:22 z:33];
-    
+    [TSNotificationCenter call_didMove_with_x:11 y:22 z:33];   
 }
 ```
 

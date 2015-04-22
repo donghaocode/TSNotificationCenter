@@ -32,6 +32,7 @@
         dic[Id] =[[NSMutableDictionary alloc]init];
     }
     
+    //--------------------------auto remove--------------------------
     static const char *objc_key = "TSNotificationCenterAutoRemove";
     TSNotificationCenterAutoRemove *ar = objc_getAssociatedObject(observer,objc_key);
     if (ar==nil) {
@@ -41,6 +42,8 @@
         };
         objc_setAssociatedObject(observer,objc_key, ar, OBJC_ASSOCIATION_RETAIN);
     }
+    //--------------------------auto remove--------------------------
+    
     
     
     //--------------------------debug--------------------------
