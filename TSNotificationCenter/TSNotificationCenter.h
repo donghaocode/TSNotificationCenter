@@ -1,36 +1,5 @@
 #import <Foundation/Foundation.h>
 
-@interface NSObject(TSNotificationCenter)
-#define TSNC_0(name) \
--(void)ts_##name:(void(^)())block;
-
-#define TSNC_1(name,type1,name1) \
--(void)ts_##name:(void(^)(type1 name1))block;
-
-#define TSNC_2(name,type1,name1,type2,name2) \
--(void)ts_##name:(void(^)(type1 name1,type2 name2))block;
-
-#define TSNC_3(name,type1,name1,type2,name2,type3,name3) \
--(void)ts_##name:(void(^)(type1 name1,type2 name2,type3 name3))block;
-
-#define TSNC_4(name,type1,name1,type2,name2,type3,name3,type4,name4) \
--(void)ts_##name:(void(^)(type1 name1,type2 name2,type3 name3,type4 name4))block;
-
-#define TSNC_5(name,type1,name1,type2,name2,type3,name3,type4,name4,type5,name5) \
--(void)ts_##name:(void(^)(type1 name1,type2 name2,type3 name3,type4 name4,type5 name5))block;
-
-#include "TSNotificationCenter__config.h"
-
-#undef TSNC_0
-#undef TSNC_1
-#undef TSNC_2
-#undef TSNC_3
-#undef TSNC_4
-#undef TSNC_5
-@end
-
-
-
 @interface TSNotificationCenter : NSObject
 
 #define TSNC_0(name,...) \
@@ -61,6 +30,37 @@
 #undef TSNC_5
 
 
-//-(void)regSystemNotificationWithName:(NSString*)name block:(void(^)(id data))block;
-
 @end
+
+
+
+
+@interface NSObject(TSNotificationCenter)
+#define TSNC_0(name) \
+-(void)ts_##name:(void(^)())block;
+
+#define TSNC_1(name,type1,name1) \
+-(void)ts_##name:(void(^)(type1 name1))block;
+
+#define TSNC_2(name,type1,name1,type2,name2) \
+-(void)ts_##name:(void(^)(type1 name1,type2 name2))block;
+
+#define TSNC_3(name,type1,name1,type2,name2,type3,name3) \
+-(void)ts_##name:(void(^)(type1 name1,type2 name2,type3 name3))block;
+
+#define TSNC_4(name,type1,name1,type2,name2,type3,name3,type4,name4) \
+-(void)ts_##name:(void(^)(type1 name1,type2 name2,type3 name3,type4 name4))block;
+
+#define TSNC_5(name,type1,name1,type2,name2,type3,name3,type4,name4,type5,name5) \
+-(void)ts_##name:(void(^)(type1 name1,type2 name2,type3 name3,type4 name4,type5 name5))block;
+
+#include "TSNotificationCenter__config.h"
+
+#undef TSNC_0
+#undef TSNC_1
+#undef TSNC_2
+#undef TSNC_3
+#undef TSNC_4
+#undef TSNC_5
+@end
+

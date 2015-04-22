@@ -14,6 +14,7 @@
 		E11C834B1AE4B4E700C023B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E11C834A1AE4B4E700C023B9 /* Images.xcassets */; };
 		E11C834E1AE4B4E700C023B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E11C834C1AE4B4E700C023B9 /* LaunchScreen.xib */; };
 		E1206FD61AE4D096005652F5 /* TSNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = E1206FD41AE4D096005652F5 /* TSNotificationCenter.m */; };
+		E166B5EA1AE756BE0071276C /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E166B5E91AE756BE0071276C /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		E1206FD31AE4D096005652F5 /* TSNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSNotificationCenter.h; sourceTree = "<group>"; };
 		E1206FD41AE4D096005652F5 /* TSNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSNotificationCenter.m; sourceTree = "<group>"; };
 		E1206FD51AE4D096005652F5 /* TSNotificationCenter__config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSNotificationCenter__config.h; sourceTree = "<group>"; };
+		E166B5E81AE756BE0071276C /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		E166B5E91AE756BE0071276C /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,8 @@
 			children = (
 				E11C83411AE4B4E700C023B9 /* AppDelegate.h */,
 				E11C83421AE4B4E700C023B9 /* AppDelegate.m */,
+				E166B5E81AE756BE0071276C /* TestViewController.h */,
+				E166B5E91AE756BE0071276C /* TestViewController.m */,
 				E11C83441AE4B4E700C023B9 /* ViewController.h */,
 				E11C83451AE4B4E700C023B9 /* ViewController.m */,
 				E11C83471AE4B4E700C023B9 /* Main.storyboard */,
@@ -168,6 +173,7 @@
 				E11C83431AE4B4E700C023B9 /* AppDelegate.m in Sources */,
 				E11C83401AE4B4E700C023B9 /* main.m in Sources */,
 				E1206FD61AE4D096005652F5 /* TSNotificationCenter.m in Sources */,
+				E166B5EA1AE756BE0071276C /* TestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
