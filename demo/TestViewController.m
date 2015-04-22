@@ -30,7 +30,7 @@
     
     //system notification
     //self dealloc ---> will auto remove
-    [self regSystemNotificationWithName:UIKeyboardWillShowNotification
+    [self ts_regSystemNotificationWithName:UIKeyboardWillShowNotification
                                   block:^(NSNotification *notification)
     {
         NSLog(@"---------- UIKeyboardWillShowNotification");

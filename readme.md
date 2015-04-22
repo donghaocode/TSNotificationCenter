@@ -12,7 +12,7 @@ TSNC_3(didMove, int, x, int, y, int,z)
 ###TestViewController.m
 ####self dealloc ---> will auto remove
 
-```objective-c
+```
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -32,7 +32,7 @@ TSNC_3(didMove, int, x, int, y, int,z)
     
     //system notification
     //self dealloc ---> will auto remove
-    [self regSystemNotificationWithName:UIKeyboardWillShowNotification
+    [self ts_regSystemNotificationWithName:UIKeyboardWillShowNotification
                                   block:^(NSNotification *notification)
     {
         NSLog(@"---------- UIKeyboardWillShowNotification");

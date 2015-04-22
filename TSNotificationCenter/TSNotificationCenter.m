@@ -168,7 +168,7 @@ if (block!=nil) {block(name1,name2,name3,name4,name5);}}}
 
 
 
--(void)regSystemNotificationWithName:(NSString*)name block:(void(^)(NSNotification* notification))block{
+-(void)ts_regSystemNotificationWithName:(NSString*)name block:(void(^)(NSNotification* notification))block{
     
     NSString *Id=[NSString stringWithFormat:@"(%s_%p)",object_getClassName(self),self];
     
