@@ -2,14 +2,14 @@
 #import <objc/runtime.h>
 
 
-@interface TSNotificationCenterAutoRemove : NSObject
-@property(nonatomic,copy)void(^onDealloc)();
+@interface __AutoRemove : NSObject
+@property(nonatomic,copy)void(^deallocBlock)();
 @end
 
-@implementation TSNotificationCenterAutoRemove
+@implementation __AutoRemove
 -(void)dealloc{
-    if (self.onDealloc!=nil) {
-        self.onDealloc();
+    if (self.deallocBlock!=nil) {
+        self.deallocBlock();
     }
 }
 @end
@@ -34,10 +34,10 @@
     
     //--------------------------auto remove--------------------------
     static const char *objc_key = "TSNotificationCenterAutoRemove";
-    TSNotificationCenterAutoRemove *ar = objc_getAssociatedObject(observer,objc_key);
+    __AutoRemove *ar = objc_getAssociatedObject(observer,objc_key);
     if (ar==nil) {
-        ar = [[TSNotificationCenterAutoRemove alloc]init];
-        ar.onDealloc=^{
+        ar = [[__AutoRemove alloc]init];
+        ar.deallocBlock=^{
             [TSNotificationCenter removeObserver:Id];
         };
         objc_setAssociatedObject(observer,objc_key, ar, OBJC_ASSOCIATION_RETAIN);
@@ -48,9 +48,9 @@
     
     //--------------------------debug--------------------------
     if (dic[Id][key]!=nil) {
-        NSLog(@"cover %@ %@",Id,key);
+        NSLog(@"[cover %@ %@]",Id,key);
     }else{
-        NSLog(@"reg %@ %@",Id,key);
+        NSLog(@"[reg %@ %@]",Id,key);
     }
     //--------------------------debug--------------------------
     
@@ -63,7 +63,7 @@
     [dic removeObjectForKey:Id];
     
     //--------------------------debug--------------------------
-    NSLog(@"remove %@",Id);
+    NSLog(@"[remove %@]",Id);
     //--------------------------debug--------------------------
 }
 
@@ -164,5 +164,52 @@ if (block!=nil) {block(name1,name2,name3,name4,name5);}}}
 #undef TSNC_3
 #undef TSNC_4
 #undef TSNC_5
+
+
+
+
+-(void)regSystemNotificationWithName:(NSString*)name block:(void(^)(NSNotification* notification))block{
+    
+    NSString *Id=[NSString stringWithFormat:@"(%s_%p)",object_getClassName(self),self];
+    
+    //-----static dic-----//
+    static NSMutableDictionary *dic = nil;
+    if (dic==nil) {
+        dic=[[NSMutableDictionary alloc]init];
+    }
+    if (dic[Id]==nil) {
+        dic[Id] = [[NSMutableArray alloc]init];
+    }
+    [dic[Id] addObject:[[NSNotificationCenter defaultCenter] addObserverForName:name object:nil queue:[NSOperationQueue mainQueue] usingBlock:block]];
+    
+    
+    //--------------------------debug--------------------------
+    NSLog(@"[system add %@ %@]",Id,name);
+    //--------------------------debug--------------------------
+    
+    
+    //--------------------------auto remove--------------------------
+    static const char *objc_key = "SystemNotificationAutoRemove";
+    __AutoRemove *ar = objc_getAssociatedObject(self,objc_key);
+    if (ar==nil) {
+        ar = [[__AutoRemove alloc]init];
+        ar.deallocBlock=^{
+            for (id observer in dic[Id]) {
+                [[NSNotificationCenter defaultCenter] removeObserver:observer];
+            }
+            [dic removeObjectForKey:Id];
+            
+            //--------------------------debug--------------------------
+            NSLog(@"[system remove %@]",Id);
+            //--------------------------debug--------------------------
+            
+        };
+        objc_setAssociatedObject(self,objc_key, ar, OBJC_ASSOCIATION_RETAIN);
+    }
+    //--------------------------auto remove--------------------------
+    
+    
+    
+}
 
 @end

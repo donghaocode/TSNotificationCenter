@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1062E291AE7A1930060D218 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1062E271AE7A1930060D218 /* TestViewController.xib */; };
 		E11C83401AE4B4E700C023B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E11C833F1AE4B4E700C023B9 /* main.m */; };
 		E11C83431AE4B4E700C023B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E11C83421AE4B4E700C023B9 /* AppDelegate.m */; };
 		E11C83461AE4B4E700C023B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11C83451AE4B4E700C023B9 /* ViewController.m */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E1062E271AE7A1930060D218 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		E11C833A1AE4B4E700C023B9 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E11C833E1AE4B4E700C023B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E11C833F1AE4B4E700C023B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				E11C83421AE4B4E700C023B9 /* AppDelegate.m */,
 				E166B5E81AE756BE0071276C /* TestViewController.h */,
 				E166B5E91AE756BE0071276C /* TestViewController.m */,
+				E1062E271AE7A1930060D218 /* TestViewController.xib */,
 				E11C83441AE4B4E700C023B9 /* ViewController.h */,
 				E11C83451AE4B4E700C023B9 /* ViewController.m */,
 				E11C83471AE4B4E700C023B9 /* Main.storyboard */,
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E11C83491AE4B4E700C023B9 /* Main.storyboard in Resources */,
+				E1062E291AE7A1930060D218 /* TestViewController.xib in Resources */,
 				E11C834E1AE4B4E700C023B9 /* LaunchScreen.xib in Resources */,
 				E11C834B1AE4B4E700C023B9 /* Images.xcassets in Resources */,
 			);

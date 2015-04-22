@@ -62,5 +62,8 @@
 #undef TSNC_3
 #undef TSNC_4
 #undef TSNC_5
+
+-(void)regSystemNotificationWithName:(NSString*)name block:(void(^)(NSNotification *notification))block;
+
 @end
 

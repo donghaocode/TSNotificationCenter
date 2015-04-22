@@ -15,17 +15,25 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
+    
     //self dealloc ---> will auto remove
     [self ts_test:^{
-        NSLog(@"test");
+        NSLog(@"---------- test");
     }];
     
     [self ts_hello:^(NSString *name) {
-        NSLog(@"hello %@",name);
+        NSLog(@"---------- hello %@",name);
     }];
     
     [self ts_didMove:^(int x, int y, int z) {
-        NSLog(@"x=%d  y=%d  z=%d",x,y,z);
+        NSLog(@"---------- x=%d  y=%d  z=%d",x,y,z);
+    }];
+    
+    
+    //system notification
+    //self dealloc ---> will auto remove
+    [self regSystemNotificationWithName:UIKeyboardWillShowNotification block:^(NSNotification *notification) {
+        NSLog(@"---------- UIKeyboardWillShowNotification");
     }];
     
     

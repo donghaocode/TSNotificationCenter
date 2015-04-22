@@ -16,16 +16,6 @@
 
 @implementation ViewController
 
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    [self ts_test:^{
-        NSLog(@"______________ test");
-    }];
-}
-
-
 -(IBAction)pushVc{
     [self.navigationController pushViewController:[[TestViewController alloc]init] animated:YES];
 }
