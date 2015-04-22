@@ -3,14 +3,9 @@
 ###TSNotificationCenter__config.h
 
 ```objective-c
-
-
-
 TSNC_0(test)
 TSNC_1(hello,NSString*,name)
 TSNC_3(didMove, int, x, int, y, int,z)
-
-
 
 ```
 
@@ -18,7 +13,6 @@ TSNC_3(didMove, int, x, int, y, int,z)
 ####self dealloc ---> will auto remove
 
 ```objective-c
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -42,8 +36,5 @@ TSNC_3(didMove, int, x, int, y, int,z)
     [TSNotificationCenter call_didMove_with_x:11 y:22 z:33];
     
 }
-
-
-
 ```
 
