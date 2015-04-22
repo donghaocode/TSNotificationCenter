@@ -12,7 +12,7 @@ TSNC_3(didMove, int, x, int, y, int,z)
 ###TestViewController.m
 ####self dealloc ---> will auto remove
 
-```
+```objective-c
 - (void)viewDidLoad {
     [super viewDidLoad];
     
