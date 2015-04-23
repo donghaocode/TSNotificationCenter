@@ -48,9 +48,9 @@
     
     //--------------------------debug--------------------------
     if (dic[Id][key]!=nil) {
-        NSLog(@"[cover %@ %@]",Id,key);
+        NSLog(@"[TSNotificationCenter] cover %@ %@",Id,key);
     }else{
-        NSLog(@"[reg %@ %@]",Id,key);
+        NSLog(@"[TSNotificationCenter] reg %@ %@",Id,key);
     }
     //--------------------------debug--------------------------
     
@@ -63,7 +63,7 @@
     [dic removeObjectForKey:Id];
     
     //--------------------------debug--------------------------
-    NSLog(@"[remove %@]",Id);
+    NSLog(@"[TSNotificationCenter remove %@",Id);
     //--------------------------debug--------------------------
 }
 
@@ -184,7 +184,7 @@ if (block!=nil) {block(name1,name2,name3,name4,name5);}}}
     
     
     //--------------------------debug--------------------------
-    NSLog(@"[system add %@ %@]",Id,name);
+    NSLog(@"[TSNotificationCenter] system add %@ %@",Id,name);
     //--------------------------debug--------------------------
     
     
@@ -200,7 +200,7 @@ if (block!=nil) {block(name1,name2,name3,name4,name5);}}}
             [dic removeObjectForKey:Id];
             
             //--------------------------debug--------------------------
-            NSLog(@"[system remove %@]",Id);
+            NSLog(@"[TSNotificationCenter] system remove %@",Id);
             //--------------------------debug--------------------------
             
         };
