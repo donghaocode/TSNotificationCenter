@@ -16,6 +16,14 @@
 
 @implementation ViewController
 
+-(void)viewDidLoad{
+    
+    [self ts_hello:^(NSString *name) {
+        NSLog(@"---------- hello %@",name);
+    }];
+    
+}
+
 -(IBAction)pushVc{
     [self.navigationController pushViewController:[[TestViewController alloc]init] animated:YES];
 }

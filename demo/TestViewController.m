@@ -9,24 +9,21 @@
 #import "TestViewController.h"
 #import "TSNotificationCenter.h"
 
+
+
+@interface TestViewController()
+@property(nonatomic)IBOutlet UITextField *tf;
+@end
+
 @implementation TestViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     //self dealloc ---> will auto remove
-    [self ts_test:^{
-        NSLog(@"---------- test");
-    }];
-    
-    [self ts_hello:^(NSString *name) {
-        NSLog(@"---------- hello %@",name);
-    }];
-    
-    [self ts_didMove:^(int x, int y, int z) {
+    [self ts_test:^(int x, int y, int z) {
         NSLog(@"---------- x=%d  y=%d  z=%d",x,y,z);
     }];
-    
     
     //system notification
     //self dealloc ---> will auto remove
@@ -37,9 +34,12 @@
     }];
     
     
-    [TSNotificationCenter call_test];
-    [TSNotificationCenter call_hello_with_name:@"fc01"];
-    [TSNotificationCenter call_didMove_with_x:11 y:22 z:33];
+    [TSNotificationCenter call_test_with_x:11 y:22 z:33];
+}
+
+
+-(IBAction)callTest{
+    [TSNotificationCenter call_hello_with_name:self.tf.text];
 }
 
 @end
