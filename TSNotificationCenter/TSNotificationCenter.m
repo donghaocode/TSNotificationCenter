@@ -17,16 +17,17 @@
 
 @implementation TSNotificationCenter
 
-+(NSMutableDictionary*) getDic{
++(NSMutableDictionary*) getBlockDic{
     static NSMutableDictionary* dic = nil;
     if (dic==nil) {
         dic=[[NSMutableDictionary alloc]init];
     }
+    //dic <string, <string,block> >
     return dic;
 }
 
 +(void)addObserver:(id)observer key:(NSString*)key value:(id)value{
-    NSMutableDictionary *dic = [TSNotificationCenter getDic];
+    NSMutableDictionary *dic = [TSNotificationCenter getBlockDic];
     NSString *Id=[NSString stringWithFormat:@"(%s_%p)",object_getClassName(observer),observer];
     if (dic[Id]==nil) {
         dic[Id] =[[NSMutableDictionary alloc]init];
@@ -59,7 +60,7 @@
 }
 
 +(void)removeObserver:(NSString*)Id{
-    NSMutableDictionary *dic = [TSNotificationCenter getDic];
+    NSMutableDictionary *dic = [TSNotificationCenter getBlockDic];
     [dic removeObjectForKey:Id];
     
     //--------------------------debug--------------------------
@@ -70,7 +71,7 @@
 
 #define TSNC_0(name,...) \
 +(void)call_##name{\
-NSMutableDictionary *dic = [TSNotificationCenter getDic];\
+NSMutableDictionary *dic = [TSNotificationCenter getBlockDic];\
 for (NSString* d in dic){\
 void (^block)() = dic[d][@#name];\
 if (block!=nil) {block();}}}
@@ -78,7 +79,7 @@ if (block!=nil) {block();}}}
 
 #define TSNC_1(name,type1,name1) \
 +(void)call_##name##_with_##name1:(type1)name1{\
-NSMutableDictionary *dic = [TSNotificationCenter getDic];\
+NSMutableDictionary *dic = [TSNotificationCenter getBlockDic];\
 for (NSString* d in dic){\
 void (^block)(type1 name1) = dic[d][@#name];\
 if (block!=nil) {block(name1);}}}
@@ -86,7 +87,7 @@ if (block!=nil) {block(name1);}}}
 
 #define TSNC_2(name,type1,name1,type2,name2) \
 +(void)call_##name##_with_##name1:(type1)name1 name2:(type2)name2{\
-NSMutableDictionary *dic = [TSNotificationCenter getDic];\
+NSMutableDictionary *dic = [TSNotificationCenter getBlockDic];\
 for (NSString* d in dic){\
 void (^block)(type1 name1,type2 name2) = dic[d][@#name];\
 if (block!=nil) {block(name1,name2);}}}
@@ -94,7 +95,7 @@ if (block!=nil) {block(name1,name2);}}}
 
 #define TSNC_3(name,type1,name1,type2,name2,type3,name3) \
 +(void)call_##name##_with_##name1:(type1)name1 name2:(type2)name2 name3:(type3)name3{\
-NSMutableDictionary *dic = [TSNotificationCenter getDic];\
+NSMutableDictionary *dic = [TSNotificationCenter getBlockDic];\
 for (NSString* d in dic){\
 void (^block)(type1 name1,type2 name2,type3 name3) = dic[d][@#name];\
 if (block!=nil) {block(name1,name2,name3);}}}
@@ -102,7 +103,7 @@ if (block!=nil) {block(name1,name2,name3);}}}
 
 #define TSNC_4(name,type1,name1,type2,name2,type3,name3,type4,name4) \
 +(void)call_##name##_with_##name1:(type1)name1 name2:(type2)name2 name3:(type3)name3 name4:(type4)name4{\
-NSMutableDictionary *dic = [TSNotificationCenter getDic];\
+NSMutableDictionary *dic = [TSNotificationCenter getBlockDic];\
 for (NSString* d in dic){\
 void (^block)(type1 name1,type2 name2,type3 name3,type4 name4) = dic[d][@#name];\
 if (block!=nil) {block(name1,name2,name3,name4);}}}
@@ -110,7 +111,7 @@ if (block!=nil) {block(name1,name2,name3,name4);}}}
 
 #define TSNC_5(name,type1,name1,type2,name2,type3,name3,type4,name4,type5,name5) \
 +(void)call_##name##_with_##name1:(type1)name1 name2:(type2)name2 name3:(type3)name3 name4:(type4)name4 name5:(type5)name5{\
-NSMutableDictionary *dic = [TSNotificationCenter getDic];\
+NSMutableDictionary *dic = [TSNotificationCenter getBlockDic];\
 for (NSString* d in dic){\
 void (^block)(type1 name1,type2 name2,type3 name3,type4 name4,type5 name5) = dic[d][@#name];\
 if (block!=nil) {block(name1,name2,name3,name4,name5);}}}
