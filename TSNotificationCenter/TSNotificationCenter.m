@@ -20,7 +20,7 @@
 +(NSMutableDictionary*) getBlockDic{
     static NSMutableDictionary* dic = nil;
     if (dic==nil) {
-        dic=[[NSMutableDictionary alloc]init];
+        dic=[NSMutableDictionary new];
     }
     //dic <string, <string,block> >
     return dic;
@@ -30,14 +30,14 @@
     NSMutableDictionary *dic = [TSNotificationCenter getBlockDic];
     NSString *Id=[NSString stringWithFormat:@"(%s_%p)",object_getClassName(observer),observer];
     if (dic[Id]==nil) {
-        dic[Id] =[[NSMutableDictionary alloc]init];
+        dic[Id] =[NSMutableDictionary new];
     }
     
     //--------------------------auto remove--------------------------
     static const char *objc_key = "TSNotificationCenterAutoRemove";
     __AutoRemove *ar = objc_getAssociatedObject(observer,objc_key);
     if (ar==nil) {
-        ar = [[__AutoRemove alloc]init];
+        ar = [__AutoRemove new];
         ar.deallocBlock=^{
             [TSNotificationCenter removeObserver:Id];
         };
@@ -176,10 +176,10 @@ if (block!=nil) {block(name1,name2,name3,name4,name5);}}}
     //-----static dic-----//
     static NSMutableDictionary *dic = nil;
     if (dic==nil) {
-        dic=[[NSMutableDictionary alloc]init];
+        dic=[NSMutableDictionary new];
     }
     if (dic[Id]==nil) {
-        dic[Id] = [[NSMutableArray alloc]init];
+        dic[Id] = [NSMutableArray new];
     }
     [dic[Id] addObject:[[NSNotificationCenter defaultCenter] addObserverForName:name object:nil queue:[NSOperationQueue mainQueue] usingBlock:block]];
     
@@ -193,7 +193,7 @@ if (block!=nil) {block(name1,name2,name3,name4,name5);}}}
     static const char *objc_key = "SystemNotificationAutoRemove";
     __AutoRemove *ar = objc_getAssociatedObject(self,objc_key);
     if (ar==nil) {
-        ar = [[__AutoRemove alloc]init];
+        ar = [__AutoRemove new];
         ar.deallocBlock=^{
             for (id observer in dic[Id]) {
                 [[NSNotificationCenter defaultCenter] removeObserver:observer];
