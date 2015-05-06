@@ -1,6 +1,7 @@
 #import <Foundation/Foundation.h>
 
-@interface TSNotificationCenter : NSObject
+NS_ROOT_CLASS
+@interface TSNotificationCenter
 
 #define TSNC_0(name,...) \
 +(void)call_##name;
