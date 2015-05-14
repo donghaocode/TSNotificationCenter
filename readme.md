@@ -4,8 +4,8 @@
 
 ###config TSNotificationCenter__config.h
 ```objective-c 
-TSNC_1(hello,NSString*,name)
-TSNC_3(test,int,x,int,y,int,z)
+TSNC(hello,NSString*,name)
+TSNC(test,int,x,int,y,int,z)
 ```
 
 ###reg
