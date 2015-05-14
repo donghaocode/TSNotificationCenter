@@ -1,3 +1,5 @@
 
-TSNC_1(hello,NSString*,name)
-TSNC_3(test,int,x,int,y,int,z)
+
+TSNC(fc01)
+TSNC(hello,NSString*,name)
+TSNC(test,int,x,int,y,int,z)

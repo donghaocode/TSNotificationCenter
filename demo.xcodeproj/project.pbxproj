@@ -19,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A0EA42BF1B0471FE00C20226 /* metamacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
 		E1062E271AE7A1930060D218 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		E11C833A1AE4B4E700C023B9 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E11C833E1AE4B4E700C023B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +96,7 @@
 		E1206FD21AE4D096005652F5 /* TSNotificationCenter */ = {
 			isa = PBXGroup;
 			children = (
+				A0EA42BF1B0471FE00C20226 /* metamacros.h */,
 				E1206FD31AE4D096005652F5 /* TSNotificationCenter.h */,
 				E1206FD41AE4D096005652F5 /* TSNotificationCenter.m */,
 				E1206FD51AE4D096005652F5 /* TSNotificationCenter__config.h */,
